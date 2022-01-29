@@ -7,6 +7,7 @@
     <script src="jquery.js" charset="UTF-8"></script>
     <script src="client.js" charset="UTF-8"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/46128ddc2f.js" crossorigin="anonymous"></script>
     <title>Employee Salary Calculator</title>
 </head>
 <body>
@@ -34,7 +35,8 @@
                 <div class="inputWrap">
                     <input type="number" class="inputs" id="salaryIn" placeholder="Annual Salary">
                 </div>
-                <button class="inputs" id="submitBtn">Submit</button>
+                <button class="inputs" id="submitBtn"><i class="fas fa-plus"></i></button>
+                <span id="inputAlert"></span>
             </div>
         </section>
         <section id="right">
@@ -53,7 +55,8 @@
                 <tr><span></span></tr>
             </tbody>
         </table>
-        <h3>Total Monthly: $<span id="totalSal"></span></h3>
+        <h3>Total Monthly: <span id="totalSal"></span></h3>
+        <span id="alert"></span>
         </div>
         </section>
         </main>

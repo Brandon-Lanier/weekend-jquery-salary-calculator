@@ -1,6 +1,7 @@
 $(document).ready(readyNow)
 
 let employees = [];
+const maxMonthly = 20000;
 
 function readyNow() {
    $('#submitBtn').on('click', addEmployee);
@@ -12,23 +13,24 @@ function addEmployee() {
     let el = $('.inputs');
     let salary = $('#salaryIn').val(); // Number($('#salaryIn').val());
     let monthlySal = salary / 12;
-    monthlySal = monthlySal.toFixed(2);
+    monthlySal = monthlySal.toFixed(2); //Getting number to 2 decimals
     let employee = {
         firstName: $('#firstNameIn').val(),
         lastName: $('#lastNameIn').val(),
         idNumber: $('#idIn').val(),
         title: $('#titleIn').val(),
         salary: salary,
-        monthlySalary: Number(monthlySal) //Number(monthlySal)
-    };
+        monthlySalary: Number(monthlySal) //Changing to number value when storing in object
+    }
     el.val('');
     employees.push(employee)
     displayEmp(employee);
-}
+ }
+
 
 function displayEmp(employee) {
     let el = $('#tableBody')
-    el.append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></tr>`)
+    el.append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></tr>`)//
     calculateSal();
 }
 
@@ -50,11 +52,13 @@ function calculateSal() {
     }
     let el = $('#totalSal');
     el.empty();
-    el.append(totalSal);
-    if (totalSal >= 20000) {
-        $('#totalSal').css('background-color', 'red');
+    $('#alert').empty();
+    el.append('$' + totalSal);
+    if (totalSal >= maxMonthly) {
+        $('#totalSal').css('background-color', '#e07979');
+        $('#alert').append(`Monthly Budget Exceeded`)
      } else {
-        $('#totalSal').css('background-color', 'white')
+        $('#totalSal').css('background-color', '#c4d3df')
      }
 }
 

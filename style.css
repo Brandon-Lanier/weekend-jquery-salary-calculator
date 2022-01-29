@@ -6,6 +6,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: contain;
     height: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
 }
 
 #wrapper {
@@ -41,7 +43,9 @@ main {
 
 h1 {
     margin: 0;
-    padding: 20px;
+    padding: 25px;
+    color: #ffffff;
+   
 }
 
 header {
@@ -49,45 +53,52 @@ header {
     text-align: center;
     margin: 0;
     width: 100%;
+    box-shadow: 0 5px 0 #c6c6c6;
 }
 
 table {
-    background-color: #a9e1ff;
+    background-color: #a3c7e3;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid black;
+    /* border: 1px solid #7d7d7d; */
 }
 
-/* thead {
-    background-color: #dbdbdb;
-    border: solid 1px; */
-/* } */
-
-th, td {
-   background-color: #a3c7e3;
+th {
+   background-color: #bbbbbb;
    border-collapse: collapse;
-   border: 1px solid black;
+   /* border: 1px solid #7d7d7d; */
+   padding: 5px;
+   height: 30px;
+   font-style: italic;
 } 
 
-tbody tr:nth-child(odd){
-    background-color: #dbdbdb;
+td {
+    /* background-color: #a3c7e3; */
+    border-collapse: collapse;
+    padding: 10px;
+    /* border: 1px solid #7d7d7d; */
+}
+
+tr:nth-child(odd){
+    background-color: #abd1ee;
   }
 
   #tableContainer {
-      background-color: #a3c7e3;
+      background-color: #c4d3df;
       display: flex;
       flex-flow: column wrap;
       border-radius: 20px;
       padding: 15px;
       margin: 25px;
       width: 75%;
-      box-shadow: -5px 5px 5px #c6c6c6;
+      box-shadow: 0 0 10px #c6c6c6;
+      border: 7px solid #a3c7e3;
   }  
 
   .inputs {
       border: none;
       outline: none;
-      background-color: white;
+      background-color: #ffffff;;
   }
 
   .inputWrap {
@@ -110,7 +121,9 @@ tbody tr:nth-child(odd){
       padding: 15px;
       margin: 25px;
       width: 350px;
-      box-shadow: 5px 5px 5px #c6c6c6;
+      box-shadow: 5px 5px  #c6c6c6;
+      height: 350px;
+      /* border: 5px solid #c6c6c6; */
   }
 
   #inputContainer h3 {
@@ -122,7 +135,30 @@ tbody tr:nth-child(odd){
     align-self: center;
     margin: 10px;
     width: 150px;
-    heightL: 75px;
+    height: 40px;
+}
+
+#submitBtn:hover {
+    box-shadow: 0 0 10px 2px #c6c6c6;
+    cursor: pointer;
+    width: 155px;
+    height: 50px;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.deleteBtn {
+    border-radius: 5px;
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+}
+
+.fas fa-plus {
+    height: 20px;
+    width: 20px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
