@@ -1,22 +1,67 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-image: url('emplpyee3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
 }
+
+#wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    /* align-items: center; */
+    align-content: space-between;
+    width: 100%;
+    justify-content: center;
+    background-repeat: none;
+    background-position-y: center;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#left {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#right {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 h1 {
     margin: 0;
     padding: 20px;
 }
+
 header {
-    background-color: #dbdbdb;
+    background-color: #a3c7e3;
     text-align: center;
     margin: 0;
+    width: 100%;
+}
+
+table {
+    background-color: #a3c7e3;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
 }
 
 thead {
     background-color: #dbdbdb;
     border: solid 1px;
 }
-
+/* 
 table {
     border: solid 1px;
     width: 50%;
@@ -25,8 +70,47 @@ table {
 
 td {
     border: solid 1px;
-}
+} */
 
 tbody tr:nth-child(odd){
     background-color: #dbdbdb;
+  }
+
+  #tableContainer {
+      background-color: #a3c7e3;
+      display: flex;
+      flex-flow: column wrap;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 25px;
+  }  
+
+  .inputs {
+      border: none;
+      outline: none;
+      background-color: white;
+  }
+
+  .inputWrap {
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+  }
+
+  .inputWrap:hover {
+      box-shadow: 0 0 0 5px #8c99c2;
+  }
+
+  #inputContainer {
+      background-color: #a3c7e3;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 25px;
+      width: 75%;
+  }
+
+  #inputContainer h3 {
+      text-align: center;
   }
