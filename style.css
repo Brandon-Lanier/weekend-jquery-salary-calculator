@@ -28,7 +28,7 @@ main {
 #left {
     display: flex;
     justify-content: center;
-    width: 300px;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -36,6 +36,7 @@ main {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    width: 60%;
 }
 
 h1 {
@@ -51,26 +52,22 @@ header {
 }
 
 table {
-    background-color: #a3c7e3;
+    background-color: #a9e1ff;
     width: 100%;
     border-collapse: collapse;
     border: 1px solid black;
 }
 
-thead {
+/* thead {
     background-color: #dbdbdb;
-    border: solid 1px;
-}
-/* 
-table {
-    border: solid 1px;
-    width: 50%;
-    text-align: center;
-}
+    border: solid 1px; */
+/* } */
 
-td {
-    border: solid 1px;
-} */
+th, td {
+   background-color: #a3c7e3;
+   border-collapse: collapse;
+   border: 1px solid black;
+} 
 
 tbody tr:nth-child(odd){
     background-color: #dbdbdb;
@@ -83,6 +80,8 @@ tbody tr:nth-child(odd){
       border-radius: 20px;
       padding: 15px;
       margin: 25px;
+      width: 75%;
+      box-shadow: -5px 5px 5px #c6c6c6;
   }  
 
   .inputs {
@@ -94,23 +93,41 @@ tbody tr:nth-child(odd){
   .inputWrap {
     border: 2px solid #ebebeb;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     padding: 5px;
     background-color: white;
   }
 
   .inputWrap:hover {
-      box-shadow: 0 0 0 5px #8c99c2;
+      box-shadow: 0 0 10px #8c99c2;
   }
 
   #inputContainer {
+      display: flex;
+      flex-direction: column;
       background-color: #a3c7e3;
       border-radius: 20px;
       padding: 15px;
       margin: 25px;
-      width: 75%;
+      width: 350px;
+      box-shadow: 5px 5px 5px #c6c6c6;
   }
 
   #inputContainer h3 {
       text-align: center;
   }
+
+  #submitBtn {
+    border-radius: 5px;
+    align-self: center;
+    margin: 10px;
+    width: 150px;
+    heightL: 75px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
