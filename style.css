@@ -2,9 +2,10 @@ body, html {
     margin: 0;
     padding: 0;
     background-image: url('emplpyee3.jpeg');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: #ffffff;
     height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
@@ -15,6 +16,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.331);
 }
 
 h1 {
@@ -51,10 +53,9 @@ th:last-child {
 th {
    background-color: #a9a9a9; /*#bbbbbb*/
    border-collapse: collapse;
-   /* border: 1px solid #7d7d7d; */
+   border-bottom: 1px solid #7d7d7d;
    padding: 5px;
    height: 30px;
-   /* font-style: italic; */
    text-align: left;
 } 
 
@@ -68,10 +69,6 @@ td {
 tr:nth-child(odd){
     background-color: #aed4f2;
   }
-
-/* td:last-child { 
-    text-align: center;
-} */
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -108,7 +105,7 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     background-color: #ffffff;
     border: none;
-    color: #8c99c2;
+    color: #4c5160;
     height: 20px;
 }
 
@@ -125,12 +122,8 @@ input[type=number]::-webkit-outer-spin-button {
 #wrapper {
     display: flex;
     flex-flow: column wrap;
-    /* align-items: center; */
     align-content: space-between;
     width: 100%;
-    /* justify-content: center; */
-    /* background-repeat: none;
-    background-position-y: center; */
 }
 
 #inputContainer {
@@ -181,12 +174,11 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 60%;
+    width: 60%; 
 }
 
 #tableContainer {
     background-color: rgba(255, 255, 255, 0.933);
-    /* background-color: #c4d3df; */
     display: flex;
     flex-flow: column wrap;
     border-radius: 20px;
@@ -202,7 +194,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #tableFoot {
-    background-color: #a9a9a9;;
+    background-color: #a9a9a9;
+    border-top: 1px solid #7d7d7d;
 }
 
 #tableFoot td:first-child{

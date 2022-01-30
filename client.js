@@ -2,6 +2,7 @@ $(document).ready(readyNow)
 
 let employees = [];
 const maxMonthly = 20000;
+let numberFormat = new Intl.NumberFormat('en-US');
 
 function readyNow() {
    $('#submitBtn').on('click', addEmployee);
@@ -38,6 +39,7 @@ function addEmployee() {
 
 function displayEmp(employee) {
     let el = $('#tableBody')
+    employee.salary = numberFormat.format(employee.salary);
     el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)//
     $(`#${employee.idNumber}`).hide().fadeIn("slow")
     calculateSal();
@@ -57,21 +59,21 @@ function deleteEmp(){
 
 function calculateSal() {
     let totalSal = 0;
+    let el = $('#totalSal');
     for (employee of employees) {
         totalSal += employee.monthlySalary;
     }
-    let el = $('#totalSal');
     el.empty();
     $('#alert').empty();
-    let numberFormat = new Intl.NumberFormat('en-US');
-    totalSal = numberFormat.format(totalSal);
-    el.append('$' + totalSal);
     if (totalSal >= maxMonthly) {
         $('#totalSal').css('background-color', '#e07979');
         $('#alert').append(`Monthly Budget Exceeded`)
      } else {
         $('#totalSal').css('background-color', '')
      }
+    
+    totalSal = numberFormat.format(totalSal);
+    el.append('$' + totalSal);
     
 }
 // function calculateSal() {
