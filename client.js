@@ -1,8 +1,8 @@
 $(document).ready(readyNow)
 
-let employees = [];
-const maxMonthly = 20000;
-let numberFormat = new Intl.NumberFormat('en-US');
+let employees = []; // Storing employee objects in array.
+const maxMonthly = 20000; // Max budget for the month.
+let numberFormat = new Intl.NumberFormat('en-US'); // To add commas to salaries.
 
 function readyNow() {
    $('#submitBtn').on('click', addEmployee);
@@ -16,11 +16,11 @@ function addEmployee() {
     let lastName = $('#lastNameIn').val();
     let idNumber = $('#idIn').val();
     let title = $('#titleIn').val();
-    let salary = $('#salaryIn').val(); // Number($('#salaryIn').val());
+    let salary = $('#salaryIn').val(); 
     let monthlySal = salary / 12;
     monthlySal = monthlySal.toFixed(2); //Getting number to 2 decimals
     $('#inputAlert').empty()
-    if (firstName && lastName && idNumber && title && salary) {
+    if (firstName && lastName && idNumber && title && salary) { // Requires all fields to be entered.
     let employee = {
         firstName: firstName,
         lastName: lastName,
@@ -29,75 +29,48 @@ function addEmployee() {
         salary: salary,
         monthlySalary: Number(monthlySal) //Changing to number value when storing in object
         }
-        el.val('');
-        employees.push(employee)
+        el.val(''); // Remove values from inputs after submit.
+        employees.push(employee) // Store employee in array
         displayEmp(employee);
         }  else {
-            $('#inputAlert').append(`All Fields Required`)
+            $('#inputAlert').append(`All Fields Required`) // Alert if not all fields are entered.
         }
  }
 
 function displayEmp(employee) {
     let el = $('#tableBody')
-    employee.salary = numberFormat.format(employee.salary);
-    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)//
-    $(`#${employee.idNumber}`).hide().fadeIn("slow")
-    calculateSal();
+    employee.salary = numberFormat.format(employee.salary); // Converting to format with commas
+    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)// .prev() will allow the footer row to stay at the bottom.
+    $(`#${employee.idNumber}`).hide().fadeIn("slow"); // Fade in animate the row.
+    calculateSal(); // recalculate total monthly salary when new employee is added.
 }
 
 function deleteEmp(){
-    let id = $(this).closest('tr').attr('id');
-    $(this).closest('tr').fadeOut();
+    let id = $(this).closest('tr').attr('id'); // Getting the table row that the remove button lives in and row id to remove from array.
+    $(this).closest('tr').fadeOut(); // Animate the removal of employee from table.
     $(this).remove();
     for (let i = 0; i < employees.length; i++) {
-        if (employees[i].idNumber === id) {
-        employees.splice(i, 1);
+        if (employees[i].idNumber === id) { // If row ID matches an employee ID 
+        employees.splice(i, 1);  // Remove the object from array if ID matches
         }  
     }
-    calculateSal();
+    calculateSal(); // Recalculate total monthly costs if employee is removed.
 }
 
 function calculateSal() {
     let totalSal = 0;
     let el = $('#totalSal');
+    el.empty();
+    $('#alert').empty();
     for (employee of employees) {
         totalSal += employee.monthlySalary;
     }
-    el.empty();
-    $('#alert').empty();
     if (totalSal >= maxMonthly) {
-        $('#totalSal').css('background-color', '#e07979');
-        $('#alert').append(`Monthly Budget Exceeded`)
+        $('#totalSal').css('background-color', '#e07979'); // Changes background color to red if over max budget.
+        $('#alert').append(`Monthly Budget Exceeded`) // Alert message
      } else {
-        $('#totalSal').css('background-color', '')
+        $('#totalSal').css('background-color', '') // Removes the background color if monthly total goes below max
      }
-    
-    totalSal = numberFormat.format(totalSal);
+    totalSal = numberFormat.format(totalSal); // Formatting number to have commas
     el.append('$' + totalSal);
-    
 }
-// function calculateSal() {
-//     let totalSal = 0;
-//     for (employee of employees) {
-//         totalSal += employee.monthlySalary;
-//     }
-//     let el = $('#totalSal');
-//     el.empty();
-//     $('#alert').empty();
-//     el.append('$' + totalSal)
-//     if (totalSal >= maxMonthly) {
-//         $('#totalSal').css('background-color', 'red');
-//         $('#alert').append(`Monthly Budget Exceeded`)
-//      } else {
-//         $('#totalSal').css('background-color', '#ffffff')
-//      }
-// }
-
- // let id = $(this).attr('#delete');
-    // $('#delete').closest('tr').remove(); //Only deletes first row! I want to delete relative row an object
-    // let ind = id.split('');    
-    // employees.splice(ind[1]-1,1);
-    // let obj = $(this).closest('tr').employees.data()
-    // log
-    // let removed = $(this).closest('td').data(obj);
-    

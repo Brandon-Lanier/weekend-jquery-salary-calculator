@@ -137,16 +137,12 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 3px 3px 1px #c6c6c6;
     height: 360px;
     text-align: center;
-    /* border: 5px solid #c6c6c6; */
   }
 
   #inputContainer h3 {
     color: white;
     text-shadow: 1px 1px #3d414d;
   }
-  /* #inputContainer h3 {
-      text-align: center;
-  } */
 
 #submitBtn {
     border-radius: 5px;
