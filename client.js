@@ -11,16 +11,20 @@ function readyNow() {
 
 function addEmployee() {
     let el = $('.inputs');
+    let firstName = $('#firstNameIn').val();
+    let lastName = $('#lastNameIn').val();
+    let idNumber = $('#idIn').val();
+    let title = $('#titleIn').val();
     let salary = $('#salaryIn').val(); // Number($('#salaryIn').val());
     let monthlySal = salary / 12;
     monthlySal = monthlySal.toFixed(2); //Getting number to 2 decimals
     $('#inputAlert').empty()
-    if ($('#firstNameIn') && $('#lastNameIn') && $('#idIn') && $('#titleIn') && salary) {
+    if (firstName && lastName && idNumber && title && salary) {
     let employee = {
-        firstName: $('#firstNameIn').val(),
-        lastName: $('#lastNameIn').val(),
-        idNumber: $('#idIn').val(),
-        title: $('#titleIn').val(),
+        firstName: firstName,
+        lastName: lastName,
+        idNumber: idNumber,
+        title: title,
         salary: salary,
         monthlySalary: Number(monthlySal) //Changing to number value when storing in object
         }
@@ -34,14 +38,15 @@ function addEmployee() {
 
 function displayEmp(employee) {
     let el = $('#tableBody')
-    el.append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)//
+    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)//
     $(`#${employee.idNumber}`).hide().fadeIn("slow")
     calculateSal();
 }
 
 function deleteEmp(){
     let id = $(this).closest('tr').attr('id');
-    $(this).closest('tr').remove();
+    $(this).closest('tr').fadeOut();
+    $(this).remove();
     for (let i = 0; i < employees.length; i++) {
         if (employees[i].idNumber === id) {
         employees.splice(i, 1);
@@ -58,18 +63,37 @@ function calculateSal() {
     let el = $('#totalSal');
     el.empty();
     $('#alert').empty();
-    el.append('$' + totalSal)
+    let numberFormat = new Intl.NumberFormat('en-US');
+    totalSal = numberFormat.format(totalSal);
+    el.append('$' + totalSal);
     if (totalSal >= maxMonthly) {
-        $('#totalSal').css('background-color', 'red');
+        $('#totalSal').css('background-color', '#e07979');
         $('#alert').append(`Monthly Budget Exceeded`)
      } else {
-        $('#totalSal').css('background-color', 'rgba(255, 255, 255, 0.913)')
+        $('#totalSal').css('background-color', '')
      }
+    
 }
+// function calculateSal() {
+//     let totalSal = 0;
+//     for (employee of employees) {
+//         totalSal += employee.monthlySalary;
+//     }
+//     let el = $('#totalSal');
+//     el.empty();
+//     $('#alert').empty();
+//     el.append('$' + totalSal)
+//     if (totalSal >= maxMonthly) {
+//         $('#totalSal').css('background-color', 'red');
+//         $('#alert').append(`Monthly Budget Exceeded`)
+//      } else {
+//         $('#totalSal').css('background-color', '#ffffff')
+//      }
+// }
 
  // let id = $(this).attr('#delete');
     // $('#delete').closest('tr').remove(); //Only deletes first row! I want to delete relative row an object
-    // let ind = id.split('');
+    // let ind = id.split('');    
     // employees.splice(ind[1]-1,1);
     // let obj = $(this).closest('tr').employees.data()
     // log
