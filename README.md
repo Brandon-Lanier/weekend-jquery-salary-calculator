@@ -1,6 +1,5 @@
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=brandon-lanier&layout=compact)
-
-
+![REPO SIZE](https://img.shields.io/github/repo-size/brandon-lanier/the_marketplace.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/brandon-lanier/the_marketplace.svg?style=flat-square)
 # jQuery Employee Salary Calculator
 
 ## Description
@@ -47,6 +46,8 @@ Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped m
 Thanks to everyone in the Adam's Cohort for your continued support during our first week of tier 2!
 
 ## Support
-If you have suggestions or issues, please email me at [brandonjlanier@gmail.com](mailto:brandonjlanier@gmail.com)
+If you have suggestions or issues, please feel free to contact me via email or LinkedIn.
 
-[Visit my LinkedIn Profile](https://www.linkedin.com/in/brandon-lanier-b5678b26/)
+<a href="mailto:brandonjlanier@gmail.com">![brandonjlanier@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a><a href="<https://www.linkedin.com/in/brandon-lanier-b5678b26/>">![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
+
+
