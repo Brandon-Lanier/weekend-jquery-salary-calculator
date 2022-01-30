@@ -46,15 +46,17 @@ function displayEmp(employee) {
 }
 
 function deleteEmp() {
-    let id = $(this).closest('tr').attr('id'); // Getting the table row that the remove button lives in and row id to remove from array.
-    $(this).closest('tr').fadeOut(); // Animate the removal of employee from table.
-    $(this).remove(); // Removes table row
-    for (let i = 0; i < employees.length; i++) {
-        if (employees[i].idNumber === id) { // If row ID matches an employee ID 
-            employees.splice(i, 1); // Remove the object from array if ID matches
+    let id = $(this).closest('tr').attr('id'); // Getting the table row that the remove button lives in and row id to remove from array.   
+    if (confirm('Confirm Removing Employee')) { //Confirm deletion of employee.
+        $(this).closest('tr').fadeOut(); // Animate the removal of employee from table.
+        $(this).remove(); // Removes table row
+        for (let i = 0; i < employees.length; i++) {
+            if (employees[i].idNumber === id) { // If row ID matches an employee ID 
+                employees.splice(i, 1); // Remove the object from array if ID matches
+            }
         }
+       calculateSal(); //Recalculate total monthly costs if employee is removed.
     }
-    calculateSal(); //Recalculate total monthly costs if employee is removed.
 }
 
 function calculateSal() {
