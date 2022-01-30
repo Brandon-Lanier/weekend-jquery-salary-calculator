@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,58 +11,67 @@
     <script src="https://kit.fontawesome.com/46128ddc2f.js" crossorigin="anonymous"></script>
     <title>Employee Salary Calculator</title>
 </head>
+
 <body>
     <div id="wrapper">
-    <header>
-        <h1>Salary Calculator</h1>
-    </header>
-    
-    <main id="mainContent">
-        <section id="left">
-        <div id="inputContainer">
-            <h3>Add New Employee</h3>
-                <div class="inputWrap">
-                    <input type="text" class="inputs" id="firstNameIn" placeholder="First Name">
-                </div>
-                <div class="inputWrap">
-                    <input type="text" class="inputs" id="lastNameIn" placeholder="Last Name">
-                </div>
-                <div class="inputWrap">
-                    <input type="number" class="inputs" id="idIn" placeholder="ID">
-                </div>  
-                <div class="inputWrap">
-                    <input type="text" class="inputs" id="titleIn" placeholder="Title">
-                </div>
-                <div class="inputWrap">
-                    <input type="number" class="inputs" id="salaryIn" placeholder="Annual Salary">
-                </div>
-                <button class="inputs" id="submitBtn"><i class="fas fa-plus"></i></button>
-                <span id="inputAlert"></span>
-            </div>
-        </section>
-        <section id="right">
-            <div id="tableContainer">
-            <h3>Employees</h3>
-            <table id="table">
-            <thead id="tableHead">
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Salary</th>
-                <th>Remove</th>
-            </thead>
-           
-            <tbody id="tableBody">
-                <tr id="tableFoot"><td></td><td></td><td></td><td></td><td></td><td></td></tbody>
-            </tbody>
+        <header>
+            <h1>Salary Calculator</h1>
+        </header>
 
-        </table>
-        <h3>Total Monthly: <span id="totalSal"></span></h3>
-        <span id="alert"></span>
-        </div>
-        </section>
+        <main id="mainContent">
+            <section id="left">
+                <div id="inputContainer">
+                    <h3>Add New Employee</h3>
+                    <div class="inputWrap">
+                        <input type="text" class="inputs" id="firstNameIn" placeholder="First Name">
+                    </div>
+                    <div class="inputWrap">
+                        <input type="text" class="inputs" id="lastNameIn" placeholder="Last Name">
+                    </div>
+                    <div class="inputWrap">
+                        <input type="number" class="inputs" id="idIn" placeholder="ID">
+                    </div>
+                    <div class="inputWrap">
+                        <input type="text" class="inputs" id="titleIn" placeholder="Title">
+                    </div>
+                    <div class="inputWrap">
+                        <input type="number" class="inputs" id="salaryIn" placeholder="Annual Salary">
+                    </div>
+                    <button class="inputs" id="submitBtn"><i class="fas fa-plus"></i></button>
+                    <span id="inputAlert"></span>
+                </div>
+            </section>
+            <section id="right">
+                <div id="tableContainer">
+                    <h3>Employees</h3>
+                    <table id="table">
+                        <thead id="tableHead">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Salary</th>
+                            <th>Remove</th>
+                        </thead>
+
+                        <tbody id="tableBody">
+                            <tr id="tableFoot">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tbody>
+                        </tbody>
+
+                    </table>
+                    <h3>Total Monthly: <span id="totalSal"></span></h3>
+                    <span id="alert"></span>
+                </div>
+            </section>
         </main>
     </div>
 </body>
+
 </html>

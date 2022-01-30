@@ -4,7 +4,7 @@
 
 ## Description
 
-_Duration: 16 Hours_
+_Duration: 2 Day Sprint_
 
 This app was designed to take in employee information, store that information in a database and calculate the monthly payroll costs for the company.  Each employee will be displayed on a table after being entered, and the user has the option to delete the employee from both the table and database.
 
@@ -29,7 +29,7 @@ No installation required.
 1. Enter all employee information in the inputs (Required).
 2. Press the add button.
 3. Employee will be added to the spreadsheet and database.
-4. Total _monthly cost will automatically be calculated at the bottom of the spreadsheet.
+4. Total _monthly_ cost will automatically be calculated at the bottom of the spreadsheet.
 5. If total monthly costs exceed $20k, user will be warned of exceeding max.
 6. Remove employees from the spreadsheet and database by using the remove button.
 

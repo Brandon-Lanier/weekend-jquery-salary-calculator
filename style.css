@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     background-image: url('emplpyee3.jpeg');
@@ -49,27 +50,27 @@ th:last-child {
 }
 
 th {
-   background-color: #a9a9a9; 
-   border-collapse: collapse;
-   border-bottom: 1px solid #7d7d7d;
-   padding: 5px;
-   height: 30px;
-   text-align: left;
-} 
+    background-color: #a9a9a9;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7d7d7d;
+    padding: 5px;
+    height: 30px;
+    text-align: left;
+}
 
 td {
     border-collapse: collapse;
     padding: 10px;
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
     background-color: #aed4f2;
-  }
+}
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .inputs {
@@ -90,7 +91,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: white;
     text-align: left;
     overflow: hidden;
-  }
+}
 
 .inputWrap:hover {
     box-shadow: 0 0 10px #8c99c2;
@@ -134,12 +135,12 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 3px 3px 1px #c6c6c6;
     height: 360px;
     text-align: center;
-  }
+}
 
-  #inputContainer h3 {
+#inputContainer h3 {
     color: white;
     text-shadow: 1px 1px #3d414d;
-  }
+}
 
 #submitBtn {
     border-radius: 5px;
@@ -167,7 +168,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 60%; 
+    width: 60%;
 }
 
 #tableContainer {
@@ -180,7 +181,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 75%;
     box-shadow: 0 0 10px #c6c6c6;
     border: 5px solid #a3c7e3;
-}  
+}
 
 #tableContainer h3 {
     color: #4c5160;
@@ -191,18 +192,11 @@ input[type=number]::-webkit-outer-spin-button {
     border-top: 1px solid #7d7d7d;
 }
 
-#tableFoot td:first-child{
-    border-radius: 0 0 0 10px;;
+#tableFoot td:first-child {
+    border-radius: 0 0 0 10px;
+    ;
 }
 
-#tableFoot td:last-child{
+#tableFoot td:last-child {
     border-radius: 0 0 10px 0;
 }
-
-
-
-
-
-
-
-
