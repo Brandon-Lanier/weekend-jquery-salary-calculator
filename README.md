@@ -48,6 +48,5 @@ Thanks to everyone in the Adam's Cohort for your continued support during our fi
 ## Support
 If you have suggestions or issues, please feel free to contact me at [Brandonjlanier@gmail.com](mailto:brandonjlanier@gmail.com)
 
-<a href="<https://www.linkedin.com/in/brandon-lanier-b5678b26/>">!https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white</a>
-
+Visit my [LinkedIn](https://www.linkedin.com/in/brandon-lanier-b5678b26/)
 
