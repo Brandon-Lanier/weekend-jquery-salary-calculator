@@ -40,7 +40,7 @@ function addEmployee() {
 function displayEmp(employee) {
     let el = $('#tableBody')
     employee.salary = numberFormat.format(employee.salary); // Converting to format with commas
-    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn">Remove</button></td></tr>`)// .prev() will allow the footer row to stay at the bottom.
+    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn"><i class="fas fa-user-minus"></i></button></td></tr>`)// .prev() will allow the footer row to stay at the bottom.
     $(`#${employee.idNumber}`).hide().fadeIn("slow"); // Fade in animate the row.
     calculateSal(); // recalculate total monthly salary when new employee is added.
 }
