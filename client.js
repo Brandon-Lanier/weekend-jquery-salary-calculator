@@ -61,7 +61,7 @@ function calculateSal() {
     let totalSal = 0;
     let el = $('#totalSal');
     el.empty();
-    $('#alert').empty();
+    $('#alert').empty(); // removed alert each time in case total goes below 20k
     for (employee of employees) {
         totalSal += employee.monthlySalary;
     }
