@@ -1,18 +1,13 @@
-(View Raw will give you the markdown that you can copy to your repos!)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=brandon-lanier&layout=compact)
 
-
-![MIT LICENSE](https://img.shields.io/github/license/scottbromander/the_marketplace.svg?style=flat-square)
-![REPO SIZE](https://img.shields.io/github/repo-size/scottbromander/the_marketplace.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
 
 # jQuery Employee Salary Calculator
 
 ## Description
 
-_Duration: 16 Hours
+_Duration: 16 Hours_
 
-This app was designed to take in employee information and store that information in a database.  Each employee will be displayed on a table after being entered, and the user has the option to delete the employee from both the table and database.
+This app was designed to take in employee information, store that information in a database and calculate the monthly payroll costs for the company.  Each employee will be displayed on a table after being entered, and the user has the option to delete the employee from both the table and database.
 
 The app will add up all employee salaries and calculate the total monthly cost of the companies payroll.  If that amount exceeds $20,000, it will display an alert message and change the background color of the total monthly sum to red.
 
@@ -31,7 +26,6 @@ The app will add up all employee salaries and calculate the total monthly cost o
 No installation required.
 
 ## Usage
-How does someone use this application? Tell a user story here.
 
 1. Enter all employee information in the inputs (Required).
 2. Press the add button.
@@ -50,9 +44,9 @@ How does someone use this application? Tell a user story here.
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. 
 
-Thanks to everyone in the Adam's Cohort for your continued support during our first week of tier 2 in the program!
+Thanks to everyone in the Adam's Cohort for your continued support during our first week of tier 2!
 
 ## Support
-If you have suggestions or issues, please email me at [brandonjlanier@gmail.com]
+If you have suggestions or issues, please email me at [brandonjlanier@gmail.com](mailto:brandonjlanier@gmail.com)
 
 [Visit my LinkedIn Profile](https://www.linkedin.com/in/brandon-lanier-b5678b26/)
