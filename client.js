@@ -54,7 +54,7 @@ function deleteEmp() {
             employees.splice(i, 1); // Remove the object from array if ID matches
         }
     }
-    calculateSal(); // Recalculate total monthly costs if employee is removed.
+    calculateSal(); //Recalculate total monthly costs if employee is removed.
 }
 
 function calculateSal() {
