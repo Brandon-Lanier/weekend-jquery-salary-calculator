@@ -1,5 +1,5 @@
-![REPO SIZE](https://img.shields.io/github/repo-size/brandon-lanier/the_marketplace.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/brandon-lanier/the_marketplace.svg?style=flat-square)
+![REPO SIZE](https://img.shields.io/github/repo-size/brandon-lanier/weekend-jquery-salary-calculator.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/brandon-lanier/weekend-jquery-salary-calculator.svg?style=flat-square)
 # jQuery Employee Salary Calculator
 
 ## Description
@@ -48,6 +48,7 @@ Thanks to everyone in the Adam's Cohort for your continued support during our fi
 ## Support
 If you have suggestions or issues, please feel free to contact me via email or LinkedIn.
 
-<a href="mailto:brandonjlanier@gmail.com">![brandonjlanier@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a><a href="<https://www.linkedin.com/in/brandon-lanier-b5678b26/>">![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
+<a href="mailto:brandonjlanier@gmail.com">![brandonjlanier@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a>
+<a href="<https://www.linkedin.com/in/brandon-lanier-b5678b26/>">![https://www.linkedin.com/in/brandon-lanier-b5678b26/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
 
 
