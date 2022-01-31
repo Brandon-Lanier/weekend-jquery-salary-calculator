@@ -37,11 +37,11 @@ function addEmployee() {
     }
 }
 
-function displayEmp(employee) {
+function displayEmp(emp) {
     let el = $('#tableBody')
-    employee.salary = numberFormat.format(employee.salary); // Converting to format with commas
-    el.prev().append(`<tr id="${employee.idNumber}"><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.idNumber}</td><td>${employee.title}</td><td>$${employee.salary}</td><td><button class="deleteBtn"><i class="fas fa-user-minus"></i></button></td></tr>`) // .prev() will allow the footer row to stay at the bottom.
-    $(`#${employee.idNumber}`).hide().fadeIn("slow"); // Fade in animate the row.
+    emp.salary = numberFormat.format(emp.salary); // Converting to format with commas
+    el.prev().append(`<tr id="${emp.idNumber}"><td>${emp.firstName}</td><td>${emp.lastName}</td><td>${emp.idNumber}</td><td>${emp.title}</td><td>$${emp.salary}</td><td><button class="deleteBtn"><i class="fas fa-user-minus"></i></button></td></tr>`) // .prev() will allow the footer row to stay at the bottom.
+    $(`#${emp.idNumber}`).hide().fadeIn("slow"); // Fade in animate the row.
     calculateSal(); // recalculate total monthly salary when new employee is added.
 }
 
@@ -49,7 +49,7 @@ function deleteEmp() {
     let id = $(this).closest('tr').attr('id'); // Getting the table row that the remove button lives in and row id to remove from array.   
     if (confirm('Confirm Removing Employee')) { //Confirm deletion of employee.
         $(this).closest('tr').fadeOut(); // Animate the removal of employee from table.
-        $(this).remove(); // Removes table row
+        $(this).parent().parent().remove(); // Removes table row
         for (let i = 0; i < employees.length; i++) {
             if (employees[i].idNumber === id) { // If row ID matches an employee ID 
                 employees.splice(i, 1); // Remove the object from array if ID matches
@@ -64,7 +64,7 @@ function calculateSal() {
     let el = $('#totalSal');
     el.empty();
     $('#alert').empty(); // removed alert each time in case total goes below 20k
-    for (employee of employees) {
+    for (let employee of employees) {
         totalSal += employee.monthlySalary;
     }
     if (totalSal >= maxMonthly) {
